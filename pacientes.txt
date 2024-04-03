@@ -2,3 +2,9 @@ Juan Perez, fractura de pierna, C
 Maria Ramirez, apendicitis, A
 Lorenzo Toledo, chikunguya, E
 Carmen Sarmientos, dolores de parto, B
+Juan Garcia, dolor de cabeza, D
+Maria Lopez, fiebre, C
+Pedro Martinez, dolor de garganta, A
+Ana Diaz, malestar estomacal, B
+Luis Fernandez, fatiga, B
+Elena Ruiz, tos, D

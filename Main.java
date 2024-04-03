@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         BinaryHeap binaryHeap = new BinaryHeap<>();
+
         try {
-            
             File archivo = new File("pacientes.txt");
             Scanner scanner = new Scanner(archivo);
-
-            // Itera sobre cada línea del archivo
+            
             while (scanner.hasNextLine()) {
                 // Lee la línea
                 String linea = scanner.nextLine();
@@ -23,14 +22,21 @@ public class Main {
                 String prioridad = partes[2].trim();
                 Paciente paciente = new Paciente(nombre ,sintoma, prioridad);
                 
-                // Insertar el Nodo en BynaryHeap
-                binaryHeap.insert(prioridad,paciente);
+                // Insertar los pacientes por prioridad
+                binaryHeap.insert(prioridad, paciente);
             }
 
 
             scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado: " + e.getMessage());
+        }
+
+        // Eliminar e imprimir los pacientes por prioridad
+        System.out.println("--------------PACIENTES POR PRIORIDAD--------------");
+        while (!binaryHeap.isEmpty()) {
+            Node<String, Paciente> minNode = binaryHeap.delete();
+            System.out.println(minNode.getValue().getNombre() +", " + minNode.getValue().getSintoma() + ", " + minNode.getValue().getPrioridad());
         }
     }
 }

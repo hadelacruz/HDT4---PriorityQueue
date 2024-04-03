@@ -1,4 +1,4 @@
-public interface ProrityQueue<K extends Comparable<K>,V> {
+public interface PriorityQueue<K extends Comparable<K>,V> {
     /**
      * 
      * @param key clave del nodo
