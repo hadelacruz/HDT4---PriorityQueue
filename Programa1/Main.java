@@ -1,3 +1,9 @@
+/**
+ * @author Humberto Alexander de la Cruz Chanchavac
+ * @version 1.0 2/04/2024
+ * @Description Colas de prioridad con un Arbol Binario, donde los pacientes con prioridad alta salen primero
+ * 
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -36,7 +42,7 @@ public class Main {
         System.out.println("--------------PACIENTES POR PRIORIDAD--------------");
         while (!binaryHeap.isEmpty()) {
             Node<String, Paciente> minNode = binaryHeap.delete();
-            System.out.println(minNode.getValue().getNombre() +", " + minNode.getValue().getSintoma() + ", " + minNode.getValue().getPrioridad());
+            System.out.println("* " + minNode.getValue().getNombre() +", " + minNode.getValue().getSintoma() + ", " + minNode.getValue().getPrioridad());
         }
     }
 }
